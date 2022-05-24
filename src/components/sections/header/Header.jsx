@@ -1,9 +1,11 @@
 import "./Header.css";
 import { useState } from "react";
 import EmergenteCreate from '../Emergente/Emergente';
+import EmergenteUpdate from '../Emergente/UpdateCustom';
 
 const Header = () => {
   const [CreateCustomerBtn, setCreateCustomerBtn] = useState(false);
+  const [UpdateCustomerBtn, setUpdateCustomerBtn] = useState(false);
   return (
     <>
       <header>
@@ -16,7 +18,7 @@ const Header = () => {
               </button>
             </li>
             <li>
-              <button>Update</button>
+              <button onClick={()=> setUpdateCustomerBtn(!UpdateCustomerBtn)}>Update</button>
             </li>
             <li>
               <button>Delete</button>
@@ -27,6 +29,9 @@ const Header = () => {
       <EmergenteCreate
         CreateCustomerBtn={CreateCustomerBtn}
         setCreateCustomerBtn={setCreateCustomerBtn}
+      />
+      <EmergenteUpdate UpdateCustomerBtn={UpdateCustomerBtn}
+        setUpdateCustomerBtn={setUpdateCustomerBtn}
       />
     </>
   );

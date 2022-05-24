@@ -1,9 +1,30 @@
-import React from 'react'
+import React from "react";
+import { useQuery, gql } from "@apollo/client";
+import TablaVendors from "../sections/Vendors/TablaVendors";
+import HeaderVendors from "../sections/Vendors/HeaderVendors";
+
+const QUERY_VENDORS = gql`
+  query Query {
+    DVendors {
+      _id
+      Name
+      Lastname
+      PhoneNumber
+      NameOfCompany
+      Sales
+    }
+  }
+`;
 
 const Vendors = () => {
-  return (
-    <h1>Hello</h1>
-  )
-}
+  const { data, error, loading } = useQuery(QUERY_VENDORS);
 
-export default Vendors
+  return (
+    <>
+      <HeaderVendors/>
+      {loading ? <p>Loading</p> : <TablaVendors vendrs={data?.DVendors} />}
+    </>
+  );
+};
+
+export default Vendors;

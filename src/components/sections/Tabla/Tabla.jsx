@@ -21,7 +21,7 @@ const Tablas = ({ customs }) => {
             <td>{c.Name}</td>
             <td>{c.Lastname}</td>
             <td>{c.Age}</td>
-            <td>{c.Phonenumber}</td>
+            <td>{c.Lastname}</td>
             <td>{c.Email}</td>
             <td>{c.password}</td>
             <td>{c.city}</td>

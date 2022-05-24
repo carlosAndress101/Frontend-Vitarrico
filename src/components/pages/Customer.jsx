@@ -21,7 +21,7 @@ const CUSTOMER = () => {
   return (
     <>
       <Header/>
-      {loading ? <p>loading... </p> : <Tablas customs={data?.customers} />}
+      {loading ? <p>Loading... </p> : <Tablas customs={data?.customers} />}
     </>
   );
 };
