@@ -1,0 +1,74 @@
+.overLay {
+    background: rgba(100, 100, 111, 0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+
+}
+
+.popup {
+    background: #f8f8f8;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 3px;
+    font-family: "Roboto", sans-serif;
+    padding: 20px;
+    text-align: center;
+    width: 600px;
+
+
+
+}
+
+.popup .btn_cerrar_popup {
+    font-size: 16px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    color: #BBBBBB;
+    transition: 0.3s ease all;
+}
+
+.popup .btn_cerrar_popup:hover {
+    color: red;
+}
+
+.popup h2{
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    /* opacity: 0; */
+}
+
+/* .popup form .contenedor-inputs{} */
+
+.popup form .contenedor-inputs input{
+    width: 100%;
+    margin-bottom: 20px;
+    height: 52px;
+    line-height: 52px;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid #BBBBBB;
+
+}
+
+.popup form .btn_submit{
+    padding: 0px 20px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    color: #f8f8f8;
+    background: #5E7DE3;
+    border-radius: 3px;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    transition: 0.3s ease all;
+}
+.popup form .btn_submit:hover{
+    background: rgba(94,125,227, 0.9);
+}
