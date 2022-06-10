@@ -14,7 +14,7 @@ import {
 const client = new ApolloClient({
   cache: new InMemoryCache(),
   link: new HttpLink({
-    uri: process.env.REACT_URL,
+    uri:`https://vitarrico-back-end.herokuapp.com/graphql`,
   }),
 });
 

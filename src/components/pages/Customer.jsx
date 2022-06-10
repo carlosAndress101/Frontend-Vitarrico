@@ -1,21 +1,9 @@
-import { useQuery, gql } from "@apollo/client";
+import { useQuery} from "@apollo/client";
 import Tablas from "../sections/Tabla/Tabla";
 import Header from "../sections/header/Header";
+import { QUERY_CUSTOMER } from "../query/Query";
 
-const QUERY_CUSTOMER = gql`
-  query {
-    customers {
-      _id
-      Name
-      Lastname
-      Age
-      Phonenumber
-      Email
-      password
-      city
-    }
-  }
-`;
+
 const CUSTOMER = () => {
   const { data, error, loading } = useQuery(QUERY_CUSTOMER);
   return (

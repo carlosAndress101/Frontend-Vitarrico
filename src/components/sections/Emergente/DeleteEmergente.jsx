@@ -44,7 +44,7 @@ const DeleteEmergente = ({ deletebtn, setDeletebtn }) => {
                     onChange={(evt) => set_id(evt.target.value)}
                   />
                 </div>
-                <button> DElete </button>
+                <button> Delete </button>
               </form>
             </div>
           </div>
