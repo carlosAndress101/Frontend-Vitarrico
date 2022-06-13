@@ -23,8 +23,8 @@ export const SiderbarData = [
     },
     
     {
-        title:'PROVIDER',
-        path:'/PROVIDER',
+        title:'PROVIDERS',
+        path:'/PROVIDERS',
         icon:<FaTruck/>,
         cName:'nav-text'
     },

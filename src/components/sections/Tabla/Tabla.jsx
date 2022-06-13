@@ -1,16 +1,12 @@
-import "./Tabla.css";
+
 import { VscEdit } from "react-icons/vsc";
 import { RiDeleteBin4Fill } from "react-icons/ri";
 import { useState } from "react";
 import DeleteEmergente from "../Emergente/DeleteEmergente";
 import UpdateCustom from "../Emergente/update";
-import { QUERY_CUSTOMERID } from "../../query/Query";
-import { useParams } from "react-router-dom";
-import { useQuery } from "@apollo/client";
+
 
 const Tablas = ({ customs }) => {
-  const {id} = useParams();
-  const { data, error, loading } = useQuery(QUERY_CUSTOMERID, {variables:{  id }});
   const [deletebtn, setDeletebtn] = useState(false);
   const [abrirUpdate, cerrarUpdate] = useState(false);
   return (
@@ -53,7 +49,7 @@ const Tablas = ({ customs }) => {
           ))}
         </tbody>
       </table>
-      <UpdateCustom abrirUpdate={abrirUpdate} cerrarUpdate={cerrarUpdate} customer={data}/>
+      <UpdateCustom abrirUpdate={abrirUpdate} cerrarUpdate={cerrarUpdate}/>
       <DeleteEmergente deletebtn={deletebtn} setDeletebtn={setDeletebtn} />
     </>
   );
