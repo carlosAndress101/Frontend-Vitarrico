@@ -44,6 +44,7 @@ const PRODUCTS = gql`
   query Products {
     Products {
       _id
+      Imagen
       Name
       Ingredients
       Price

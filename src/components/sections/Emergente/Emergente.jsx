@@ -1,22 +1,8 @@
 import "./Emergente.css";
 import { BsXSquareFill } from "react-icons/bs";
 import { useState } from "react";
-import { gql, useMutation } from "@apollo/client";
-
-const MUTATIONCUSTOMER = gql`
-  mutation createCustomer($customer: CreateCustomer) {
-    createCustomer(customer: $customer) {
-      _id
-      Name
-      Lastname
-      Age
-      Phonenumber
-      Email
-      password
-      city
-    }
-  }
-`;
+import {useMutation } from "@apollo/client";
+import {MUTATIONCUSTOMER} from '../../mutation/Mutation';
 
 const CreateCustomer = ({ CreateCustomerBtn, setCreateCustomerBtn }) => {
   try {

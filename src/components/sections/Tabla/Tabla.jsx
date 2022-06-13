@@ -3,7 +3,6 @@ import { VscEdit } from "react-icons/vsc";
 import { RiDeleteBin4Fill } from "react-icons/ri";
 import { useState } from "react";
 import DeleteEmergente from "../Emergente/DeleteEmergente";
-import UpdateCustom from "../Emergente/update";
 
 
 const Tablas = ({ customs }) => {
@@ -49,7 +48,6 @@ const Tablas = ({ customs }) => {
           ))}
         </tbody>
       </table>
-      <UpdateCustom abrirUpdate={abrirUpdate} cerrarUpdate={cerrarUpdate}/>
       <DeleteEmergente deletebtn={deletebtn} setDeletebtn={setDeletebtn} />
     </>
   );
